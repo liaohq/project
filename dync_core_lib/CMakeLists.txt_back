@@ -1,0 +1,9 @@
+cmake_minimum_required(VERSION 2.8)
+
+
+include_directories(.)
+include_directories(Include)
+aux_source_directory(. SRC_LIST1)
+#aux_source_directory(Include/Lua SRC_LIST2)
+
+add_library(core SHARED  ${SRC_LIST1} ${SRC_LIST2})
